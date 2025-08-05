@@ -57,3 +57,29 @@ Route::get('/jobs/{id}', function ($id) {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/boas-vindas', function() {
+    return view('boas-vindas', ['message' => "Bem-vindo ao sistema!", "username" => "Caio"]);
+});
+
+Route::get('/courses', function() {
+    return view('courses', [
+        'courses' => [
+            [
+                'id' => '1',
+                'title' => 'PHP For Beginners',
+                'duration' => '10 horas'
+            ],
+            [
+                'id' => '2',
+                'title' => 'Object-Oriented Principles in PHP',
+                'duration' => '3 horas'
+            ],
+            [
+                'id' => '3',
+                'title' => '30 Days to Learn Laravel',
+                'duration' => '8 horas'
+            ]
+        ]
+    ]);
+});
