@@ -4,14 +4,14 @@
 
 @if ($type === 'success')
   <div class="bg-green-400">
-        <p>{{ $slot }}</p>
+    <p>{{ $slot }}</p>
   </div>
 @elseif ($type === 'error')
-    <div class="bg-red-400">
-        <p>{{ $slot }}</p>
-    </div>
+  <div class="bg-red-400">
+    <p>{{ $slot }}</p>
+  </div>
 @else
-    <div class="bg-blue-400">
-        <p>{{ $slot }}</p>
-    </div>
+  <div class="bg-blue-400">
+    <p>{{ $slot }}</p>
+  </div>
 @endif
