@@ -31,3 +31,9 @@ Route::get('/users', function () {
     "users" => User::all()
   ]);
 });
+
+Route::get('/users/{id}', function ($id) {
+  $user = User::find($id);
+
+  return view('user', ['user' => $user]);
+});
