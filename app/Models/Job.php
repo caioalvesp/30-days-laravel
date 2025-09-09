@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
@@ -35,6 +36,8 @@ class Job extends Model {
 //
 //        return $job;
 //    }
+
+    use HasFactory;
 
     protected $table = 'job_listings';
 
